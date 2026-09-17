@@ -30,7 +30,7 @@ export const createOrder = (reqData) => async (dispatch) => {
 export const getOrderById = (orderId) => async (dispatch) => {
     dispatch({type: GET_ORDER_BY_ID_REQUEST});
     try{
-        const {data} =await api.post(
+        const {data} =await api.get(
             `/api/orders/${orderId}`,
             
             );

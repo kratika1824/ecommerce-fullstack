@@ -37,7 +37,7 @@ export default function Checkout() {
   return (
     <div className='px-10 lg:px-20'>
          <Box sx={{ width: '100%' }}>
-      <Stepper activeStep={step}>
+      <Stepper activeStep={Number(step) - 1}>
         {steps.map((label, index) => {
           const stepProps = {};
           const labelProps= {}; 
