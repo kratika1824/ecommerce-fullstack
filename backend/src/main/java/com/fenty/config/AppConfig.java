@@ -47,7 +47,8 @@ public class AppConfig {
             	cfg.setAllowedOrigins(Arrays.asList(
             	    "http://localhost:3000",
             	    "http://localhost:4200",
-            	    "https://attirely-ecommerce.vercel.app"
+                "https://attirely-ecommerce.vercel.app",
+                "https://attirely-gamma.vercel.app"
             	));
             	cfg.setAllowedMethods(Arrays.asList("GET","POST","PUT","DELETE","OPTIONS"));
             	cfg.setAllowCredentials(true);
