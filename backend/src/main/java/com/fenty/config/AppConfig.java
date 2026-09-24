@@ -46,7 +46,8 @@ public class AppConfig {
             	CorsConfiguration cfg = new CorsConfiguration();
             	cfg.setAllowedOrigins(Arrays.asList(
             	    "http://localhost:3000",
-            	    "http://localhost:4200"
+            	    "http://localhost:4200",
+            	    "https://attirely-ecommerce.vercel.app"
             	));
             	cfg.setAllowedMethods(Arrays.asList("GET","POST","PUT","DELETE","OPTIONS"));
             	cfg.setAllowCredentials(true);

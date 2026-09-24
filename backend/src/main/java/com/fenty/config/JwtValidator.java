@@ -5,7 +5,6 @@ import java.io.IOException;
 
 import javax.crypto.SecretKey;
 
-import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -29,7 +28,7 @@ public class JwtValidator extends OncePerRequestFilter {
 	
 		String jwt = request.getHeader(JwtConstant.JWT_HEADER);
 		
-		if(jwt!=null) {
+		if (jwt != null && jwt.startsWith("Bearer ") && jwt.length() > 7) {
 			jwt=jwt.substring(7);
 					
 			try {
@@ -47,9 +46,8 @@ public class JwtValidator extends OncePerRequestFilter {
 				SecurityContextHolder.getContext().setAuthentication(authentication);
 						
 			}catch(Exception e) {
-				
-				throw new BadCredentialsException("invalid token...from jwt validator");
-				
+			    System.out.println("JWT VALIDATION FAILED: " + e.getClass().getName() + " - " + e.getMessage());
+			    SecurityContextHolder.clearContext();
 			}
 		}
 		
