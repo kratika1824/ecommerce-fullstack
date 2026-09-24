@@ -149,7 +149,7 @@ public class ProductServiceImplementation implements ProductService {
 			}
 		}
 		
-		int startIndex=(int)pageble.getOffset();
+int startIndex=Math.min((int)pageble.getOffset(),products.size());
 		int endIndex=Math.min(startIndex + pageble.getPageSize(),products.size());
 		
 		List<Product>pageContent=products.subList(startIndex,endIndex);
