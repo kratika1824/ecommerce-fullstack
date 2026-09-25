@@ -1,6 +1,7 @@
 package com.fenty.model;
 
 import jakarta.persistence.Column;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class PaymentInformation {
 	
@@ -8,12 +9,14 @@ public class PaymentInformation {
 	private String cardholderName;
 	
 	@Column(name="card_number")
-	private String cardNumber;
+@JsonIgnore
+private String cardNumber;
 	
 	@Column(name="expiration_date")
 	private String expiration_Date;
 	
 	@Column(name="cvv")
-	private String cvv;
+@JsonIgnore
+private String cvv;
 
 }
