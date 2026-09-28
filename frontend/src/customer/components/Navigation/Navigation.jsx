@@ -16,6 +16,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import AuthModal from "../../Auth/AuthModal";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser, logout } from "../../../State/Auth/Action";
+import attirelyLogo from "../../../assets/attirely-logo.png";
 
 
 function classNames(...classes) {
@@ -265,9 +266,9 @@ export default function Navigation() {
               <div className="ml-4 flex lg:ml-0">
                 <span className="sr-only">Your Company</span>
                 <img
-                  src="https://res.cloudinary.com/ddkso1wxi/image/upload/v1675919455/Logo/Copy_of_Zosh_Academy_nblljp.png"
+                  src={attirelyLogo}
                   alt="Shopwithzosh"
-                  className="h-8 w-8 mr-2"
+                  className="h-10 w-auto mr-2"
                 />
               </div>
 
