@@ -193,7 +193,7 @@ dispatch(findProductsById(data))
                 <div className="flex items-center space-x-3">
                   <Rating name="read-only" value={5.5} readOnly />
                   <p className="opacity-50 text-sm">56070 Ratings</p>
-                  <p className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                  <p className="ml-3 text-sm font-medium text-brand-burgundy hover:text-brand-burgundy">
                     3800 Reviews
                   </p>
                 </div>
@@ -213,7 +213,7 @@ dispatch(findProductsById(data))
                           key={size.name}
                           onClick={() => size.inStock && setSelectedSize(size.name)}
                           className={`group relative flex items-center justify-center rounded-md border p-3 cursor-pointer
-                            ${selectedSize === size.name ? "border-indigo-600 bg-indigo-600" : "border-gray-300 bg-white"}
+                            ${selectedSize === size.name ? "border-brand-burgundy bg-brand-burgundy" : "border-gray-300 bg-white"}
                             ${!size.inStock ? "border-gray-400 bg-gray-200 opacity-25 cursor-not-allowed" : ""}`}
                         >
                           <span

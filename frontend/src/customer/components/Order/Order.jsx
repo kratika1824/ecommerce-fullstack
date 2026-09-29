@@ -25,7 +25,7 @@ const Order = () => {
                     <h1 className='font-semibold '>ORDER STATUS</h1>
 
                {orderStatus.map((option)=> <div className='flex items-center'>
-                    <input defaultValue={option.value} type="checkbox" className='h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500' />
+                    <input defaultValue={option.value} type="checkbox" className='h-4 w-4 border-gray-300 text-brand-burgundy focus:ring-brand-burgundy' />
 
                     <label className='ml-3 text-sm text-gray-600'htmlFor={option.value}>
 
