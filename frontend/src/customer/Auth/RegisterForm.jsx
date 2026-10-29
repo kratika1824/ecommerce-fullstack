@@ -1,4 +1,4 @@
-import { Button, Grid, TextField } from '@mui/material'
+import { Button, Grid, TextField, Snackbar, Alert } from '@mui/material'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -82,11 +82,11 @@ const RegisterForm = () => {
 
                 <Grid item xs={12} >
                    <Button
-                   className='bg-[#9155FD] w-full'
+                   className='bg-brand-burgundy w-full'
                    type='submit'
                    variant='contained'
                    size='large'
-                   sx={{padding:".8rem 0",bgcolor:"#9155FD"}}
+                   sx={{padding:".8rem 0",bgcolor:"#4a0e18"}}
                    >
                        Register
                    </Button>
@@ -102,6 +102,9 @@ const RegisterForm = () => {
                 </Button>
             </div>
         </div>
+        <Snackbar open={Boolean(auth.error)} autoHideDuration={4000}>
+          <Alert severity="error" sx={{ width: "100%" }}>{auth.error}</Alert>
+        </Snackbar>
     </div>
   )
 }

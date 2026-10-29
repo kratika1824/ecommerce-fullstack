@@ -1,11 +1,12 @@
-import { Button, Grid, TextField } from '@mui/material'
+import { Button, Grid, TextField, Snackbar, Alert } from '@mui/material'
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { login } from '../../State/Auth/Action'
 
 const LoginForm = () => {
   const dispatch=useDispatch();
+    const {auth}=useSelector(store=>store)
     const navigate=useNavigate();
     
     const handleSubmit = (event) => {
@@ -51,11 +52,11 @@ const LoginForm = () => {
 
                 <Grid item xs={12} >
                    <Button
-                   className='bg-[#9155FD] w-full'
+                   className='bg-brand-burgundy w-full'
                    type='submit'
                    variant='contained'
                    size='large'
-                   sx={{padding:".8rem 0",bgcolor:"#9155FD"}}
+                   sx={{padding:".8rem 0",bgcolor:"#4a0e18"}}
                    >
                        Login
                    </Button>
@@ -69,6 +70,9 @@ const LoginForm = () => {
                           Register
                         </Button>
                     </div>
+        <Snackbar open={Boolean(auth.error)} autoHideDuration={4000}>
+          <Alert severity="error" sx={{ width: "100%" }}>{auth.error}</Alert>
+        </Snackbar>
                 </div>
     </div>
   )
