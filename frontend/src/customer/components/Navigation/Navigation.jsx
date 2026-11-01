@@ -9,7 +9,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-import { Avatar, Button, Menu, MenuItem } from "@mui/material";
+import { Avatar, Button, Menu, MenuItem, Snackbar, Alert } from "@mui/material";
 import { deepPurple } from "@mui/material/colors";
 import { navigation } from "./navigationData";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -33,6 +33,7 @@ export default function Navigation() {
   const openUserMenu = Boolean(anchorEl);
   const jwt = localStorage.getItem("jwt");
   const {auth}=useSelector(store=>store)
+  const [successOpen, setSuccessOpen] = useState(false);
   const dispatch=useDispatch();
   const location = useLocation();
 
@@ -66,6 +67,7 @@ export default function Navigation() {
   useEffect(()=>{
    
     if(auth.user){
+      if(openAuthModal){ setSuccessOpen(true); setTimeout(()=>setSuccessOpen(false),2000); }
       handleClose()
     }
     if(location.pathname==="/login" || location.pathname==="/register"){
@@ -263,12 +265,12 @@ export default function Navigation() {
               </button>
 
               {/* Logo */}
-              <div className="ml-4 flex lg:ml-0">
+              <div className="ml-4 flex shrink-0 lg:ml-0">
                 <span className="sr-only">Your Company</span>
                 <img
                   src={attirelyLogo}
                   alt="Shopwithzosh"
-                  className="h-10 w-auto mr-2"
+                  className="h-8 sm:h-10 w-auto shrink-0 mr-2"
                 />
               </div>
 
@@ -487,6 +489,9 @@ export default function Navigation() {
         </nav>
       </header>
       <AuthModal handleClose={handleClose} open={openAuthModal}/>
+      <Snackbar open={successOpen} anchorOrigin={{ vertical: "top", horizontal: "center" }}>
+        <Alert severity="success" variant="filled" sx={{ width: "100%" }}>Successfully done!</Alert>
+      </Snackbar>
     </div>
   );
 }
