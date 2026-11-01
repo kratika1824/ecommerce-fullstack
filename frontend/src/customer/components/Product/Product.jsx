@@ -197,7 +197,7 @@ export default function Product() {
                 <FilterListIcon />
               </div>
 
-              <form className="hidden lg:block">
+              <form>
                 {/* MULTI FILTER */}
                 {filters.map((section) => (
                   <Disclosure
