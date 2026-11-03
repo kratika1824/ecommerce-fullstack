@@ -53,7 +53,7 @@ const Cart = () => {
             </div> 
 
           </div>
-           <Button onClick={handleCheckout} variant="contained" className='w-full mt-5' sx={{ px: "2.5rem", py: ".7rem", bgcolor: "#9155fd" }}>
+           <Button onClick={handleCheckout} variant="contained" className='w-full mt-5' sx={{ px: "2.5rem", py: ".7rem", bgcolor: "#4a0e18", "&:hover": { bgcolor: "#7f2030" } }}>
                   Checkout
                 </Button>
         </div>

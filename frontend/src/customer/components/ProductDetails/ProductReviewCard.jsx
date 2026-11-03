@@ -8,7 +8,7 @@ const ProductReviewCard = () => {
 
             <Grid item xs={1}>
                 <Box>
-                    <Avatar className='text-white' sx={{width:56,height:56,bgcolor:"#9155fd"}}>R</Avatar>
+                    <Avatar className='text-white' sx={{width:56,height:56,bgcolor:"#4a0e18"}}>R</Avatar>
                 </Box>
             </Grid>
 

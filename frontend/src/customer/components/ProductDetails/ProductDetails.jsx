@@ -230,7 +230,7 @@ dispatch(findProductsById(data))
 
                 <Button onClick={handleAddToCart}
                   variant="contained"
-                  sx={{ px: "2rem", py: "1rem", bgcolor: "#9155fd" }}
+                  sx={{ px: "2rem", py: "1rem", bgcolor: "#4a0e18", "&:hover": { bgcolor: "#7f2030" } }}
                 >
                   Add To Cart
                 </Button>

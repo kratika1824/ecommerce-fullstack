@@ -304,7 +304,7 @@ export default function Product() {
           <div className="px-4 py-5 flex justify-center">
             <Pagination
               count={products.products?.totalPages}
-              color="secondary"
+              sx={{ "& .MuiPaginationItem-root.Mui-selected": { bgcolor: "#4a0e18", color: "#fff" }, "& .MuiPaginationItem-root.Mui-selected:hover": { bgcolor: "#7f2030" } }}
               onChange={handlePaginationChange}
             />
           </div>
