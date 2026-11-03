@@ -30,7 +30,6 @@ const RegisterForm = () => {
       }
 
       dispatch(register(userData))
-      console.log("userData", userData)
     }
   return (
     <div>

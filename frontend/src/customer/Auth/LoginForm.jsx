@@ -21,7 +21,6 @@ const LoginForm = () => {
       }
 
       dispatch(login(userData))
-      console.log("userData", userData)
     }
   return (
     <div>
