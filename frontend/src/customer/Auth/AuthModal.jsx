@@ -21,7 +21,7 @@ const AuthModal = ({ handleClose, open }) => {
   return (
     <div>
       <Modal
-        open={open}
+        open={open} disableScrollLock
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"

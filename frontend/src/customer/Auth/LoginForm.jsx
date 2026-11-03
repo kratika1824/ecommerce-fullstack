@@ -65,8 +65,8 @@ const LoginForm = () => {
         </form>
         <div className='flex justify-center flex-col items-center'>
                     <div className='py-3 flex items-center'>
-                        <p>if you don't have account ? </p>
-                        <Button onClick={()=>navigate("/register")} className='ml-5 ' size='small' sx={{ color: '#4a0e18', fontWeight: 600, '&:hover': { color: '#c99a2a', backgroundColor: 'transparent' } }}>
+                        <p className='whitespace-nowrap text-sm sm:text-base'>if you don't have account ? </p>
+                        <Button onClick={()=>navigate("/register")} className='ml-1 sm:ml-5' size='small' sx={{ color: '#4a0e18', fontWeight: 600, '&:hover, &:active': { color: '#c99a2a', backgroundColor: 'transparent' } }}>
                           Register
                         </Button>
                     </div>
