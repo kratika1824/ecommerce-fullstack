@@ -86,7 +86,7 @@ const RegisterForm = () => {
                    type='submit'
                    variant='contained'
                    size='large'
-                   sx={{padding:".8rem 0",bgcolor:"#4a0e18"}}
+                   sx={{padding:".8rem 0",bgcolor:"#4a0e18","&:hover":{bgcolor:"#7f2030"}}}
                    >
                        Register
                    </Button>
@@ -97,7 +97,7 @@ const RegisterForm = () => {
         <div className='flex justify-center flex-col items-center'>
             <div className='py-3 flex items-center'>
                 <p>if you have already account ? </p>
-                <Button onClick={()=>navigate("/login")} className='ml-5 ' size='small'>
+                <Button onClick={()=>navigate("/login")} className='ml-5 ' size='small' sx={{ color: '#4a0e18', fontWeight: 600, '&:hover': { color: '#c99a2a', backgroundColor: 'transparent' } }}>
                   Login
                 </Button>
             </div>
