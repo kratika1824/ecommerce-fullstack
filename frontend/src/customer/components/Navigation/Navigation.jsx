@@ -418,7 +418,7 @@ export default function Navigation() {
                         aria-expanded={open ? "true" : undefined}
                         // onClick={handleUserClick}
                         sx={{
-                          bgcolor: deepPurple[500],
+                          bgcolor: "#4a0e18",
                           color: "white",
                           cursor: "pointer",
                         }}
@@ -449,6 +449,7 @@ export default function Navigation() {
                     <Button
                       onClick={handleOpen}
                       className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                      sx={{ color: "#4a0e18", fontWeight: 600, "&:hover": { color: "#c99a2a", backgroundColor: "transparent" } }}
                     >
                       Signin
                     </Button>
