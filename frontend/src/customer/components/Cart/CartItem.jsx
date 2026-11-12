@@ -39,7 +39,7 @@ const handleRemoveItem = async () => {
             <p className="font-semibold ">₹{item.discountedPrice}</p>
             <p className="opacity-50 line-through">₹{item.price}</p>
             <p className="text-green-600 font-semibold">
-              {item.discountPersent}% Off
+              {item.product?.discountPersent}% Off
             </p>
           </div>
         </div>
