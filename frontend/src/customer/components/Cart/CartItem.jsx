@@ -52,7 +52,7 @@ const handleRemoveItem = async () => {
           </IconButton>
           <span className="py-1 px-7 border rounded-sm ">{item.quantity}</span>
 
-          <IconButton onClick={()=>handleUpdateCartIetm(1)} sx={{ color: "RGB(145 85 253)" }}>
+          <IconButton onClick={()=>handleUpdateCartIetm(1)} sx={{ color: "#4a0e18" }}>
             <AddCircleOutlineIcon />
           </IconButton>
         </div>
